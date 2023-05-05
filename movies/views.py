@@ -100,3 +100,17 @@ def post(self, request):
         return HttpResponse(status=201)
     else:
         return HttpResponse(status=400)
+
+
+class Search(ListView):
+    """Пошук фільмів"""
+    paginate_by = 3
+    def get_queryset(self):
+        q = self.request.GET.get('q')
+        a = "".join(q[0].upper()) + q[1:]
+        return Movie.objects.filter(title__icontains=a)
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context["q"] = f'q={self.request.GET.get("q")}&'
+        return context
