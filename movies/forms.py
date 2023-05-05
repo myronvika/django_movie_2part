@@ -4,7 +4,7 @@ from .models import Reviews, Rating, RatingStar
 
 
 class ReviewForm(forms.ModelForm):
-    """Форма отзывов"""
+    """Форма відгуків"""
 
     class Meta:
         model = Reviews

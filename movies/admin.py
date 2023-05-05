@@ -133,7 +133,7 @@ class RatingAdmin(admin.ModelAdmin):
 
 @admin.register(MovieShots)
 class MovieShotsAdmin(admin.ModelAdmin):
-    """Квдри з фільму"""
+    """Кадри з фільму"""
     list_display = ("title", "movie", "get_image")
     readonly_fields = ("get_image",)
 
