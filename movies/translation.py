@@ -25,3 +25,4 @@ class MovieTranslationOptions(TranslationOptions):
 @register(MovieShots)
 class MovieShotsTranslationOptions(TranslationOptions):
     fields = ('title', 'description')
+
