@@ -24,5 +24,9 @@ class MovieTranslationOptions(TranslationOptions):
 
 @register(MovieShots)
 class MovieShotsTranslationOptions(TranslationOptions):
+<<<<<<< HEAD
     fields = ('title', 'description')
 
+=======
+    fields = ('title', 'description')
+>>>>>>> origin/master
