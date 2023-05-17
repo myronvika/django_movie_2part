@@ -27,9 +27,23 @@
                         {% endfor %}
                     </ul>
                 </li>
-                <li><a href="contact.html"
-                       style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">Вхід</a>
-                </li>
+                 <li>
+                    {% if user.is_authenticated %}
+                        <span>{{ user.username }}</span>
+                        <a href="{% url 'account_logout' %}"
+                           style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">
+                            Вихід
+                        </a>
+                    {% else %}
+                        <a href="{% url 'account_login' %}"
+                           style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">
+                            Вхід
+                        </a>
+                         <a href="{% url 'account_signup' %}"
+                           style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">
+                            Реєстрація
+                        </a>
+                    {% endif %}
             </ul>
         </nav>
         <!-- //nav -->
