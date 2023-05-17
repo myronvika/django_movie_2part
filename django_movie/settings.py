@@ -35,11 +35,10 @@ INSTALLED_APPS = [
 
     'django.contrib.sites',
     'django.contrib.flatpages',
-    'ckeditor_uploader',
-    'ckeditor',
     'movies',
+    'ckeditor',
+    'ckeditor_uploader',
 
-    'contact',
 ]
 
 MIDDLEWARE = [

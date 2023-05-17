@@ -9,6 +9,6 @@ rating.addEventListener("change", function (e) {
         method: 'POST',
         body: data
     })
-        .then(response => alert("Рейтинг встановлено"))
+        .then(response => alert("Рейтинг встаневлено"))
         .catch(error => alert("Помилка"))
 });
