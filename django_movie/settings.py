@@ -205,7 +205,7 @@ CKEDITOR_CONFIGS = {
     }
 }
 
-SITE_ID = 2
+SITE_ID = 1
 
 
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
@@ -213,5 +213,4 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_REDIRECT_URL = "/"
 
 EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
-
 
