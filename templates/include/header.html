@@ -10,17 +10,19 @@
                 </h1>
             </div>
 
-            <label for="drop" class="toggle">Меню</label>
+            <label for="drop" class="toggle">Menu</label>
             <input type="checkbox" id="drop">
             <ul class="menu mt-2">
                 <li class="active"><a href="index.html">Головна</a></li>
                 <li>
-                    <!-- Перший рівень випадаючого списку -->
+                    <!-- First Tier Drop Down -->
                     <label for="drop-2" class="toggle">
+                        Категорії <span class="fa fa-angle-down" aria-hidden="true"></span>
+                    </label>
+                    <a href="#">
                         Категорії <span class="fa fa-angle-down"
                                         aria-hidden="true"></span>
-                    </label>
-                    <a href="#">Категорії <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                    </a>
                     <input type="checkbox" id="drop-2">
                     <ul>
                         {% get_categories as categories %}
@@ -53,7 +55,6 @@
     </div>
 </header>
 <!-- //header -->
-<!--/банер-->
 <div class="banner-info">
     <p class="editContent">Сайт кіно</p>
     <h3 class="mb-4 editContent">Все про кіно</h3>

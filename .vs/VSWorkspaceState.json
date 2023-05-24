@@ -1,7 +1,15 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\.idea",
+    "\\django_movie",
+    "\\movies",
+    "\\static",
+    "\\static\\js",
+    "\\templates",
+    "\\templates\\include",
+    "\\templates\\movies"
   ],
-  "SelectedNode": "\\C:\\Users\\Вікторія\\Source\\Repos\\DarDyng\\django_movie_2part",
+  "SelectedNode": "\\templates\\movies\\movie_detail.html",
   "PreviewInSolutionExplorer": false
 }

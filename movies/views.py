@@ -86,7 +86,9 @@ class AddStarRating(View):
             return x_real_ip
         else:
             return request.META.get('REMOTE_ADDR')
+
 '''Замість того, щоб перевіряти наявність HTTP_X_FORWARDED_FOR та REMOTE_ADDR,можна використати request.META.get('HTTP_X_REAL_IP')'''
+
 def post(self, request):
     form = RatingForm(request.POST)
     if form.is_valid():
