@@ -141,8 +141,6 @@ class MovieShotsAdmin(admin.ModelAdmin):
         return mark_safe(f'<img src={obj.image.url} width="50" height="60"')
 
     get_image.short_description = "Зображення"
-
-
 admin.site.register(RatingStar)
 admin.site.site_title = "Movies"
 admin.site.site_header = "Movies"

@@ -1,6 +1,5 @@
 from django.db import models
 from datetime import date
-
 from django.urls import reverse
 
 
@@ -51,7 +50,7 @@ class Genre(models.Model):
 
 
 class Movie(models.Model):
-    """Фильм"""
+    """Фільми"""
     title = models.CharField("Назва", max_length=100)
     tagline = models.CharField("Слоган", max_length=100, default='')
     description = models.TextField("Опис")
