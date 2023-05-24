@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.views.generic import ListView, DetailView
 from django.views.generic.base import View
+
 from .models import Movie, Category, Actor, Genre, Rating, Reviews
 from .forms import ReviewForm, RatingForm
 
@@ -80,13 +81,13 @@ class AddStarRating(View):
     """Добавлення рейтингу фільму"""
 
     def get_client_ip(self, request):
-        x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
-        if x_forwarded_for:
-            ip = x_forwarded_for.split(',')[0]
+        x_real_ip = request.META.get('HTTP_X_REAL_IP')
+        if x_real_ip:
+            return x_real_ip
         else:
-            ip = request.META.get('REMOTE_ADDR')
-        return ip
+            return request.META.get('REMOTE_ADDR')
 
+'''Замість того, щоб перевіряти наявність HTTP_X_FORWARDED_FOR та REMOTE_ADDR,можна використати request.META.get('HTTP_X_REAL_IP')'''
 
 def post(self, request):
     form = RatingForm(request.POST)

@@ -1,6 +1,15 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\.idea",
+    "\\django_movie",
+    "\\movies",
+    "\\static",
+    "\\static\\js",
+    "\\templates",
+    "\\templates\\include",
+    "\\templates\\movies"
   ],
+  "SelectedNode": "\\templates\\movies\\movie_detail.html",
   "PreviewInSolutionExplorer": false
 }
