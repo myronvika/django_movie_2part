@@ -1,5 +1,4 @@
-
-// Add star rating
+// Рейтинг
 const rating = document.querySelector('form[name=rating]');
 
 rating.addEventListener("change", function (e) {
