@@ -144,3 +144,5 @@ class MovieShotsAdmin(admin.ModelAdmin):
 admin.site.register(RatingStar)
 admin.site.site_title = "Movies"
 admin.site.site_header = "Movies"
+
+#Add comments to each method class to explain their purpose and functionality
