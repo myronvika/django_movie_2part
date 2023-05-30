@@ -9,6 +9,6 @@
     "\\templates",
     "\\templates\\include"
   ],
-  "SelectedNode": "\\templates\\include\\header.html",
+  "SelectedNode": "\\django_movie\\settings.py",
   "PreviewInSolutionExplorer": false
 }
