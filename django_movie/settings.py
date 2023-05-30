@@ -184,6 +184,7 @@ CKEDITOR_CONFIGS = {
     }
 }
 
+# Remove unnecessary comets
 SITE_ID = 1
 
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 10

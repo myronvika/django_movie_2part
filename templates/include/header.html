@@ -4,7 +4,8 @@
         <!-- nav -->
         <nav class="py-4">
             <div id="logo">
-                <h1><a href="index.html" class="editContent"
+                <h1>
+                    <a href="index.html" class="editContent"
                        style="outline: none; outline-offset: -2px; cursor: inherit; color: rgb(255, 255, 255); font-size: 40px; background-color: rgba(0, 0, 0, 0); font-family: Source Sans Pro;, sans-serif;">Movie</a>
                 </h1>
             </div>
@@ -15,34 +16,37 @@
                 <li class="active"><a href="index.html">Головна</a></li>
                 <li>
                     <!-- First Tier Drop Down -->
-                    <label for="drop-2" class="toggle">Категорії <span
-                            class="fa fa-angle-down" aria-hidden="true"></span> </label>
-                    <a href="#">Категорії <span class="fa fa-angle-down"
-                                                aria-hidden="true"></span></a>
+                    <label for="drop-2" class="toggle">
+                        Категорії <span class="fa fa-angle-down" aria-hidden="true"></span>
+                    </label>
+                    <a href="#">
+                        Категорії <span class="fa fa-angle-down"
+                                        aria-hidden="true"></span>
+                    </a>
                     <input type="checkbox" id="drop-2">
                     <ul>
-                            {% get_categories as categories %}
+                        {% get_categories as categories %}
                         {% for category in categories %}
-                            <li><a href="/">{{ category.name }}</a></li>
+                        <li><a href="/">{{ category.name }}</a></li>
                         {% endfor %}
                     </ul>
                 </li>
-                 <li>
+                <li>
                     {% if user.is_authenticated %}
-                        <span>{{ user.username }}</span>
-                        <a href="{% url 'account_logout' %}"
-                           style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">
-                            Вихід
-                        </a>
+                    <span>{{ user.username }}</span>
+                    <a href="{% url 'account_logout' %}"
+                       style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">
+                        Вихід
+                    </a>
                     {% else %}
-                        <a href="{% url 'account_login' %}"
-                           style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">
-                            Вхід
-                        </a>
-                         <a href="{% url 'account_signup' %}"
-                           style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">
-                            Реєстрація
-                        </a>
+                    <a href="{% url 'account_login' %}"
+                       style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">
+                        Вхід
+                    </a>
+                    <a href="{% url 'account_signup' %}"
+                       style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">
+                        Реєстрація
+                    </a>
                     {% endif %}
             </ul>
         </nav>
@@ -59,3 +63,5 @@
 
     </div>
 </div>
+
+#Separate styles from HTML by moving them to a separate CSS file or using classes.
