@@ -1,8 +1,9 @@
 {% load movie_tag %}
+
 <div class="search-bar w3layouts-newsletter">
     <h3 class="sear-head editContent">Пошук фільму</h3>
- <form action="{% url 'search' %}" method="get" class="d-flex editContent">
-        <input type="search" placeholder="Введите название..." name="q" class="form-control" required="">
+    <form action="{% url 'search' %}" method="get" class="d-flex editContent">
+        <input type="search" placeholder="Введіть назву..." name="q" class="form-control" required="">
         <button type="submit" class="btn1 btn">
             <span class="fa fa-search" aria-hidden="true"></span>
         </button>
@@ -20,8 +21,6 @@
             {% endfor %}
         </ul>
     </div>
-    <!-- // preference -->
-    <!-- discounts -->
 
     <div class="left-side">
         <h3 class="sear-head editContent">Рік</h3>
@@ -34,6 +33,7 @@
             {% endfor %}
         </ul>
     </div>
+
     <button type="submit">Знайти</button>
 </form>
 <!-- //discounts -->
@@ -59,26 +59,6 @@
                 <span class="fa fa-star" aria-hidden="true"></span>
                 <span class="fa fa-star-o" aria-hidden="true"></span>
                 <span class="editContent">4.0</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <span class="fa fa-star" aria-hidden="true"></span>
-                <span class="fa fa-star" aria-hidden="true"></span>
-                <span class="fa fa-star" aria-hidden="true"></span>
-                <span class="fa fa-star-half-o" aria-hidden="true"></span>
-                <span class="fa fa-star-o" aria-hidden="true"></span>
-                <span class="editContent">3.5</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <span class="fa fa-star" aria-hidden="true"></span>
-                <span class="fa fa-star" aria-hidden="true"></span>
-                <span class="fa fa-star" aria-hidden="true"></span>
-                <span class="fa fa-star-o" aria-hidden="true"></span>
-                <span class="fa fa-star-o" aria-hidden="true"></span>
-                <span class="editContent">3.0</span>
             </a>
         </li>
         <li>
