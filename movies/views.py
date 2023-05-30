@@ -114,3 +114,7 @@ class Search(ListView):
         context = super().get_context_data(*args, **kwargs)
         context["q"] = f'q={self.request.GET.get("q")}&'
         return context
+    
+    
+#Add comments to classes to provide a brief description of their purpose.
+#This will help other developers understand the purpose of each class more easily.

@@ -146,3 +146,5 @@ class Reviews(models.Model):
     class Meta:
         verbose_name = "Відгук"
         verbose_name_plural = "Відгуки"
+#In the Movie model, the year field has a default value of 2019.
+#It's better to use a more generic default value, like the current year, or make this field required by removing the default value
