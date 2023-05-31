@@ -64,11 +64,15 @@ WSGI_APPLICATION = 'django_movie.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'movie',
+        'USER': 'postgres',
+        'PASSWORD': 'gardin53d9',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
-
+# Remove unnecessary comets
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',

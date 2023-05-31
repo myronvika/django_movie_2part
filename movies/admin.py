@@ -3,7 +3,7 @@ from django.utils.safestring import mark_safe
 from django import forms
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 
-from .models import Category, Genre, Movie, MovieShots, Actor, Rating, RatingStar, Reviews
+from .models import Category, Genre, Movie, MovieShots, Actor, Rating, RatingStar, Review
 
 class MovieAdminForm(forms.ModelForm):
     description = forms.CharField(label="Опис", widget=CKEditorUploadingWidget())
@@ -19,7 +19,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 class ReviewInline(admin.TabularInline):
     """Відгуки на сторінці фільму"""
-    model = Reviews
+    model = Review
     extra = 1
     readonly_fields = ("name", "email")
 
@@ -100,7 +100,7 @@ class MovieAdmin(admin.ModelAdmin):
     get_image.short_description = "Постер"
 
 
-@admin.register(Reviews)
+@admin.register(Review)
 class ReviewAdmin(admin.ModelAdmin):
     """Відгуки"""
     list_display = ("name", "email", "parent", "movie", "id")

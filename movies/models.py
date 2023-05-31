@@ -121,7 +121,12 @@ class Rating(models.Model):
     """Рейтинг"""
     ip = models.CharField("IP адрес", max_length=15)
     star = models.ForeignKey(RatingStar, on_delete=models.CASCADE, verbose_name="зірка")
-    movie = models.ForeignKey(Movie, on_delete=models.CASCADE, verbose_name="фільм")
+    movie = models.ForeignKey(
+        Movie,
+        on_delete=models.CASCADE,
+        verbose_name="фільм",
+        related_name="ratings"
+    )
 
     def __str__(self):
         return f"{self.star} - {self.movie}"
@@ -131,15 +136,15 @@ class Rating(models.Model):
         verbose_name_plural = "Рейтинги"
 
 
-class Reviews(models.Model):
+class Review(models.Model):
     """Відгуки"""
     email = models.EmailField()
     name = models.CharField("Ім'я", max_length=100)
     text = models.TextField("Повідомлення", max_length=5000)
     parent = models.ForeignKey(
-        'self', verbose_name="Батьки", on_delete=models.SET_NULL, blank=True, null=True
+        'self', verbose_name="Батьки", on_delete=models.SET_NULL, blank=True, null=True, related_name="children"
     )
-    movie = models.ForeignKey(Movie, verbose_name="фільм", on_delete=models.CASCADE)
+    movie = models.ForeignKey(Movie, verbose_name="фільм", on_delete=models.CASCADE, related_name="reviews")
 
     def __str__(self):
         return f"{self.name} - {self.movie}"
