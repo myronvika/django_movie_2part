@@ -1,13 +1,23 @@
 from django.db import models
+from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from .models import Movie
-from .serializers import MovieListSerializer, MovieDetailSerializer, ReviewCreateSerializer, CreateRatingSerializer
+from .models import Movie, Actor
+from .serializers import (
+    MovieListSerializer,
+    MovieDetailSerializer,
+    ReviewCreateSerializer,
+    CreateRatingSerializer,
+    ActorListSerializer,
+    ActorDetailSerializer,
+)
 from .service import get_client_ip
+
 
 class MovieListView(APIView):
     """Вивід списку фільів"""
+
     def get(self, request):
         movies = Movie.objects.filter(draft=False).annotate(
             rating_user=models.Count("ratings", filter=models.Q(ratings__ip=get_client_ip(request)))
@@ -20,22 +30,25 @@ class MovieListView(APIView):
 
 class MovieDetailView(APIView):
     """Вивід фільма"""
+
     def get(self, request, pk):
         movie = Movie.objects.get(id=pk, draft=False)
         serializer = MovieDetailSerializer(movie)
         return Response(serializer.data)
 
+
 class ReviewCreateView(APIView):
     """Добавлення відгука до фільму"""
+
     def post(self, request):
         review = ReviewCreateSerializer(data=request.data)
         if review.is_valid():
             review.save()
         return Response(status=201)
 
+
 class AddStarRatingView(APIView):
     """Добавлення рейтинга фильму"""
-
 
     def post(self, request):
         serializer = CreateRatingSerializer(data=request.data)
@@ -44,3 +57,15 @@ class AddStarRatingView(APIView):
             return Response(status=201)
         else:
             return Response(status=400)
+
+
+class ActorsListView(generics.ListAPIView):
+    """Вивід списку акторів """
+    queryset = Actor.objects.all()
+    serializer_class = ActorListSerializer
+
+
+class ActorsDetailView(generics.RetrieveAPIView):
+    """вивід актррів і режисерів"""
+    queryset = Actor.objects.all()
+    serializer_class = ActorDetailSerializer
