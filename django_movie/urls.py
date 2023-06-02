@@ -10,6 +10,9 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('api/v1/', include('movies.urls')),
     path('accounts/', include('allauth.urls')),
+    path('auth/', include('djoser.urls')),
+    path('auth/', include('djoser.urls.authtoken')),
+    path('auth/', include('djoser.urls.jwt')),
     path('pages/', include('django.contrib.flatpages.urls')),
     path("", include("movies.urls")),
 ]
