@@ -50,7 +50,7 @@ var CKBUILDER_CONFIG = {
 		'less',
 		'node_modules',
 		'package-lock.json',
-		'package.json',
+		'versel.json',
 		'tests'
 	],
 	plugins : {
