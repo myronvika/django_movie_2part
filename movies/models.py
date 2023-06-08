@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import date
+
 from django.urls import reverse
 
 
@@ -50,7 +51,7 @@ class Genre(models.Model):
 
 
 class Movie(models.Model):
-    """Фільми"""
+    """Фильм"""
     title = models.CharField("Назва", max_length=100)
     tagline = models.CharField("Слоган", max_length=100, default='')
     description = models.TextField("Опис")
@@ -146,5 +147,3 @@ class Reviews(models.Model):
     class Meta:
         verbose_name = "Відгук"
         verbose_name_plural = "Відгуки"
-#In the Movie model, the year field has a default value of 2019.
-#It's better to use a more generic default value, like the current year, or make this field required by removing the default value
