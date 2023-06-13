@@ -1,9 +1,8 @@
-
 {
   "version": 2,
   "builds": [
     {
-      "src": "django_movie_22part/wsgi.py",
+      "src": "django_movie/wsgi.py",
       "use": "@vercel/python",
       "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
     },
@@ -22,7 +21,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "django_movie_22part/wsgi.py"
+      "dest": "django_movie/wsgi.py"
     }
   ]
 }
