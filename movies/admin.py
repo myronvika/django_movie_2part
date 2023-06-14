@@ -74,7 +74,7 @@ class MovieAdmin(admin.ModelAdmin):
         return mark_safe(f'<img src={obj.poster.url} width="100" height="110"')
 
     def unpublish(self, request, queryset):
-        """Зняти з публыкації"""
+        """Зняти з публікації"""
         row_update = queryset.update(draft=True)
         if row_update == 1:
             message_bit = "1 запис було обновлено"
