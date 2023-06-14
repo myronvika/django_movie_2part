@@ -13,21 +13,13 @@
             <label for="drop" class="toggle">Меню</label>
             <input type="checkbox" id="drop">
             <ul class="menu mt-2">
-                <li class="active"><a href="../pages/index.html">Головна</a></li>
+                <li class="active"><a href="../pages/index.html"></a></li>
                 <li>
                     <!-- Перший рівень випадаючого списку -->
                     <label for="drop-2" class="toggle">
                         Категорії <span class="fa fa-angle-down"
                                         aria-hidden="true"></span>
                     </label>
-                    <a href="#">Категорії <span class="fa fa-angle-down" aria-hidden="true"></span></a>
-                    <input type="checkbox" id="drop-2">
-                    <ul>
-                        {% get_categories as categories %}
-                        {% for category in categories %}
-                        <li><a href="/">{{ category.name }}</a></li>
-                        {% endfor %}
-                    </ul>
                 </li>
                 <li>
                     {% if user.is_authenticated %}
