@@ -1,5 +1,5 @@
 # 💫 About Me:
-🔭 I’m currently working on Юа-кіно<br>A little bit about the site.<br>This is a site where you can watch movies for every taste!<br>You can search through a user-friendly interface and search by genre, reviews, and years.<br>You can also rate movies and talk about them in the comments.<br>Registration is quite convenient, thanks to email and Google authentication.<br>The site is written on the Django framework.<br><br>🌱 I’m currently learning Django<br><br>👨‍💻 All of my projects are available at https://github.com/myronvika<br><br>📫 How to reach me myronvika@gmail.comресд
+🔭 I’m currently working on Юа-кіно<br>A little bit about the site.<br>This is a site where you can watch movies for every taste!<br>You can search through a user-friendly interface and search by genre, reviews, and years.<br>You can also rate movies and talk about them in the comments.<br>Registration is quite convenient, thanks to email and Google authentication.<br>The site is written on the Django framework.<br><br>🌱 I’m currently learning Django<br><br>👨‍💻 All of my projects are available at https://github.com/myronvika<br><br>📫 How to reach me myronvika@gmail.com
 # Встановлення
 
 ### 1) Створити віртуальне оточенння
