@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-^o583jnu$ccks=*9c3!7%%5y@#usr8z(i77ui)tc(e=ejpiyv9
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOST = ['*']
 
 INSTALLED_APPS = [
     'modeltranslation',
@@ -120,8 +120,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 STATIC_URL = '/static/'
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'staticfiles', 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
